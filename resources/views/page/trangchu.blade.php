@@ -35,7 +35,7 @@
 					<div class="beta-products-list">
 						<h4>Нові продукти</h4>
 						<div class="beta-products-details">
-							<p class="pull-left">{{count($new_product)}} знайдені стилі</p>
+						
 							<div class="clearfix"></div>
 						</div>
 
@@ -62,10 +62,10 @@
 											{{-- https://community.dynamics.com/365/b/dynamics365portalssupport/archive/2017/05/12/portal-customization-part-1-introduction-to-bootstrap-and-common-components --}}
 											<p class="single-item-price">
 												@if($new->promotion_price==0)
-													<span class="flash-sale">{{number_format($new->unit_price)}} грн</span>
+													<span class="flash-sale">{{number_format($new->unit_price, 2, '.', '')}} грн</span>
 												@else
-													<span class="flash-del">{{number_format($new->unit_price)}} грн</span>
-													<span class="flash-sale">{{number_format($new->promotion_price)}} грн</span>
+													<span class="flash-del">{{number_format($new->unit_price, 2, '.', '')}} грн</span>
+													<span class="flash-sale">{{number_format($new->promotion_price, 2, '.', '')}} грн</span>
 												@endif
 											</p>
 										</div>
@@ -82,8 +82,11 @@
 													
 						</div>
 						<div class="row">
-							{{$new_product->links()}}
+							<!-- {{$new_product->links()}} -->
+							{{$new_product->render()}}
 						</div>
+
+						
 					</div> <!-- .beta-products-list -->
 
 					<div class="space50">&nbsp;</div>
@@ -91,7 +94,7 @@
 					<div class="beta-products-list">
 						<h4>Бестселери</h4>
 						<div class="beta-products-details">
-							<p class="pull-left">{{count($promotion_price)}} знайдені стилі</p>
+						
 							<div class="clearfix"></div>
 						</div>
 						<div class="row">
@@ -116,10 +119,10 @@
 											</p> 
 											<p class="single-item-price">
 												@if($item->promotion_price==0)
-													<span class="flash-sale">{{number_format($item->unit_price)}} грн</span>
+													<span class="flash-sale">{{number_format($item->unit_price, 2, '.', '')}} грн</span>
 												@else
-													<span class="flash-del">{{number_format($item->unit_price)}} грн</span>
-													<span class="flash-sale">{{number_format($item->promotion_price)}} грн</span>
+													<span class="flash-del">{{number_format($item->unit_price, 2, '.', '')}} грн</span>
+													<span class="flash-sale">{{number_format($item->promotion_price, 2, '.', '')}} грн</span>
 												@endif
 											</p>
 										</div>

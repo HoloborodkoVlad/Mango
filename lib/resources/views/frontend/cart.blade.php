@@ -38,8 +38,8 @@
 									<input class="form-control" type="number" value="{{$item->qty}}" onchange="updateCart(this.value,'{{$item->rowId}}')">
 								</div>
 							</td>
-							<td><span class="price">{{number_format($item->price,0,',','.')}} грн</span></td>
-							<td><span class="price">{{number_format($item->price*$item->qty,0,',','.')}} грн</span></td>
+							<td><span class="price">{{number_format($item->price, 2, '.', '')}} грн</span></td>
+							<td><span class="price">{{number_format($item->price*$item->qty, 2, '.', '')}} грн</span></td>
 							<td><a href="{{ asset('cart/delete/'.$item->rowId)}}" class="btn btn-outline-danger">Delete</a></td>
 						</tr>
 					@endforeach

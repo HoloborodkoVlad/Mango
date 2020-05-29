@@ -121,9 +121,9 @@
 													<p class="font-large">{{$cart['item']['name']}}</p>
 													
 													@if($cart['item']['promotion_price']==0)
-													<span class="color-gray your-order-info">Unit price: {{number_format($cart['item']['unit_price'])}} грн</span>
+													<span class="color-gray your-order-info">Unit price: {{number_format($cart['item']['unit_price'], 2, '.', '')}} грн</span>
 													@else
-													<span class="color-gray your-order-info">Ціна з акцієї лише: {{number_format($cart['item']['promotion_price'])}} грн</span>
+													<span class="color-gray your-order-info">Ціна з акцієї лише: {{number_format($cart['item']['promotion_price'], 2, '.', '')}} грн</span>
 													@endif
 													{{-- <span class="color-gray your-order-info">Đơn giá:  {{$cart['price']}}</span> --}}
 													<span class="color-gray your-order-info">Кількість: {{$cart['qty']}}</span>
@@ -137,8 +137,8 @@
 								</div>
 								<div class="your-order-item">
 									<div class="pull-left"><p class="your-order-f18">Разом:</p></div>
-									{{-- <div class="pull-right"><h5 class="color-black">{{number_format(Session('cart')->totalPrice)}} грн</h5></div> --}}
-									<div class="pull-right"><h5 class="color-black">@if(Session::has('cart')){{number_format($totalPrice)}} @else 0 @endif грн</h5></div>
+									{{-- <div class="pull-right"><h5 class="color-black">{{number_format(Session('cart')->totalPrice, 2, '.', '')}} грн</h5></div> --}}
+									<div class="pull-right"><h5 class="color-black">@if(Session::has('cart')){{number_format($totalPrice, 2, '.', '')}} @else 0 @endif грн</h5></div>
 									<div class="clearfix"></div>
 								</div>
 							{{-- @endif --}}

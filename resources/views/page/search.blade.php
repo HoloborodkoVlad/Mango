@@ -9,7 +9,7 @@
 					<div class="beta-products-list">
 						<h4>Поиск</h4>
 						<div class="beta-products-details">
-							<p class="pull-left">{{count($product)}} знайдені стилі</p>
+							
 							<div class="clearfix"></div>
 						</div>
 <?php
@@ -38,10 +38,10 @@
 											{{-- <p class="single-item-title">{{$new->name}}</p> --}}
 											<p class="single-item-price">
 												@if($new->promotion_price==0)
-													<span class="flash-sale">{{number_format($new->unit_price)}} грн</span>
+													<span class="flash-sale">{{number_format($new->unit_price, 2, '.', '')}} грн</span>
 												@else
-													<span class="flash-del">{{number_format($new->unit_price)}} грн</span>
-													<span class="flash-sale">{{number_format($new->promotion_price)}} грн</span>
+													<span class="flash-del">{{number_format($new->unit_price, 2, '.', '')}} грн</span>
+													<span class="flash-sale">{{number_format($new->promotion_price, 2, '.', '')}} грн</span>
 												@endif
 											</p>
 										</div>

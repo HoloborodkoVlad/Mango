@@ -20,7 +20,7 @@
 				<div class="space35">&nbsp;</div>
 
 				<div class="history-slider">
-					<div class="history-navigation">
+					<div class="history-navigation center">
 						{{-- <a data-slide-index="0" href="blog_with_2sidebars_type_e.html" class="circle"><span class="auto-center">2003</span></a>
 						<a data-slide-index="1" href="blog_with_2sidebars_type_e.html" class="circle"><span class="auto-center">2004</span></a>
 						<a data-slide-index="2" href="blog_with_2sidebars_type_e.html" class="circle"><span class="auto-center">2005</span></a>

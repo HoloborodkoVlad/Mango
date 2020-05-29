@@ -59,7 +59,7 @@ function doimau($str,$key){
 											<tr>
 												<td>{{$product->id}}</td>
 												<td>{!! doimau($product->name,$key) !!} </td>
-												{{-- <td>{{number_format($product->unit_price,0,',','.')}} VND</td> --}}
+												{{-- <td>{{number_format($product->unit_price, 2, '.', '')}} VND</td> --}}
 												<td>
 													<img height="150px" src="{{asset('public/source/image/product/'.$product->image) }}" class="thumbnail">
 												</td>
@@ -70,8 +70,8 @@ function doimau($str,$key){
 														<td>{{$product->cate_name}}</td>
 														<td>{{$product->description}} </td>
 													@endif
-												<td>{{number_format($product->unit_price,0,',','.')}} VND</td>
-												<td>{{number_format($product->promotion_price,0,',','.')}} VND</td>
+												<td>{{number_format($product->unit_price, 2, '.', '')}} VND</td>
+												<td>{{number_format($product->promotion_price, 2, '.', '')}} VND</td>
 												<td> {!! doimau($product->unit,$key) !!} </td>
 												{{-- @if($key !='')
 													@if($product->new==0)

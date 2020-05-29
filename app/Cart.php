@@ -59,7 +59,7 @@ class Cart
 		
 	}
 
-	//xóa 1
+	
 	public function reduceByOne($id){
 		$this->items[$id]['qty']--;
 		$this->items[$id]['price'] -= $this->items[$id]['item']['price'];
@@ -69,7 +69,7 @@ class Cart
 			unset($this->items[$id]);
 		}
 	}
-	//xóa nhiều
+	
 	public function removeItem($id){
 		$this->totalQty -= $this->items[$id]['qty'];
 		$this->totalPrice -= $this->items[$id]['price'];

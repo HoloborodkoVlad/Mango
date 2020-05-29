@@ -32,9 +32,9 @@
 			@foreach ($cart as $item)
 				<tr>
 					<td>{{$item->name}}</td>
-					<td class="price">{{number_format($item->price)}} VND</td>
+					<td class="price">{{number_format($item->price, 2, '.', '')}} VND</td>
 					<td>{{$item->qty}}</td>
-					<td class="price">{{number_format($item->price*$item->qty,0,',','.')}} VNĐ</td>
+					<td class="price">{{number_format($item->price*$item->qty, 2, '.', '')}} VNĐ</td>
 				</tr>
 			@endforeach
 			

@@ -14,11 +14,7 @@
 			<div class="clearfix"></div>
 		</div>
 	</div>
-	<div class="beta-map">
-		
-		{{-- <div class="abs-fullwidth beta-map wow flipInX"><iframe src="https://www.google.com/maps/d/u/0/embed?mid=1lv-JlDZzJnR0BhW2w7F9GSu1ORw&hl=en&client=firefox&ie=UTF8&oe=UTF8&msa=0&ll=50.438094525292456%2C30.515642301574715&spn=0.006833%2C0.00751&z=15&output=embed" ></iframe></div> --}}
-		<div class="abs-fullwidth beta-map wow flipInX"><iframe src="https://www.google.com/maps/d/u/0/embed?mid=1lv-JlDZzJnR0BhW2w7F9GSu1ORw&hl=en&client=firefox&ie=UTF8&oe=UTF8&msa=0&ll=50.438094525292456%2C30.515642301574715&spn=0.006833%2C0.00751&z=15&output=embed" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe></div>
-	</div>
+	
 	<div class="container">
 		@if(Session::has('thongbao'))
 		<div class="row">
@@ -81,7 +77,14 @@
 					</p>
 				</div>
 			</div>
+			
 		</div> <!-- #content -->
+		
 	</div> <!-- .container -->
+	<div class="beta-map">
+		
+		{{-- <div class="abs-fullwidth beta-map wow flipInX"><iframe src="https://www.google.com/maps/d/u/0/embed?mid=1lv-JlDZzJnR0BhW2w7F9GSu1ORw&hl=en&client=firefox&ie=UTF8&oe=UTF8&msa=0&ll=50.438094525292456%2C30.515642301574715&spn=0.006833%2C0.00751&z=15&output=embed" ></iframe></div> --}}
+		<div class="abs-fullwidth beta-map wow flipInX"><iframe src="https://www.google.com/maps/d/u/0/embed?mid=1lv-JlDZzJnR0BhW2w7F9GSu1ORw&hl=en&client=firefox&ie=UTF8&oe=UTF8&msa=0&ll=50.438094525292456%2C30.515642301574715&spn=0.006833%2C0.00751&z=15&output=embed" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe></div>
+	</div>
 
 @endsection

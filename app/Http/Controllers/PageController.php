@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Pagination\Paginator;
+use Illuminate\Pagination\Factory;
 use App\Slide;
 use App\Product;
 use App\ProductType;
@@ -20,16 +22,21 @@ use Auth;
 use DB;
 use Mail;
 
+
 class PageController extends Controller
+
+
 {
+
+    
     public function getIndex()
     {
     	$slide = Slide::all();
-    	//  paginate
-    	$new_product = Product::where('new',1)->paginate(4);
 
-    	$khuyenmai = Product::where('promotion_price', '<>',0)->paginate(8);
-    	 //dd($new_product);
+    	$new_product = Product::where('new',1)->paginate(4, ['*'], '1pagination');
+        $khuyenmai = Product::where('promotion_price', '<>',0)->paginate(8, ['*'], '2pagination');
+
+  
     	return view('page.trangchu', ['slide'=>$slide, 'new_product'=>$new_product, 'promotion_price'=>$khuyenmai]);
     	
     }
@@ -139,7 +146,9 @@ class PageController extends Controller
         $comment->id_product = $id;
 
         $comment->save();
-        return redirect()->back()->with('thanhcong', 'Comment successful');
+      return redirect()->back()->with('thanhcong', 'Comment successful');
+    
+      
     }
 
     public function getLienhe()
@@ -317,7 +326,7 @@ class PageController extends Controller
 		$user->phone_number = $req->phone;
 		$user->address = $req->address;
 		$user->save();
-		return redirect()->back()->with('thanhcong', 'Created account successfully ');
+		return view('page.dangnhap');
     }
 
     public function getLogout()

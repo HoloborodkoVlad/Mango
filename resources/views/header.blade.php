@@ -37,6 +37,8 @@
 			 <pre>   </pre>
 			 <pre>   </pre>
 			 <div>   <h1> <pre><strong>  Light Novel</strong> </pre></h1> </div>
+			 <div>   <h1> <pre><strong>  Книги «манґа»</strong> </pre></h1> </div>
+			 
 				
 			
 						</div>
@@ -70,11 +72,11 @@
 											<span class="cart-item-title">{{$product['item']['name']}}</span>
 											{{-- <span class="cart-item-options">Size: XS; Colar: Navy</span> --}}
 											<span class="cart-item-amount"> {{$product['qty']}}* 
-												{{-- <span>{{number_format($product['item']['unit_price'])}}</span> --}}
+												{{-- <span>{{number_format($product['item']['unit_price'], 2, '.', '')}}</span> --}}
 												@if($product['item']['promotion_price']==0)
-												<span>{{number_format($product['item']['unit_price'])}} грн</span>
+												<span>{{number_format($product['item']['unit_price'], 2, '.', '')}} грн</span>
 												@else
-												<span>{{number_format($product['item']['promotion_price'])}} грн</span>
+												<span>{{number_format($product['item']['promotion_price'], 2, '.', '')}} грн</span>
 												@endif
 											</span>
 											{{-- <input type="number" value="" min="1"> --}}
@@ -85,7 +87,7 @@
 						
 									<div class="cart-caption">
 										<div class="cart-total text-right">Загальна оплата праці: 
-											<span class="cart-total-value">{{number_format(Session('cart')->totalPrice)}} грн</span>
+											<span class="cart-total-value">{{number_format(Session('cart')->totalPrice, 2, '.', '')}} грн</span>
 										</div>
 
 										@endif
@@ -111,7 +113,7 @@
 				<a class="visible-xs beta-menu-toggle pull-right" href="#"><span style='color: white;' class='beta-menu-toggle-text'>Меню</span> <i class="fa fa-bars"></i></a>
 				<div class="visible-xs clearfix"></div>
 				<nav class="main-menu">
-					<ul class="l-inline ov">
+					<ul class="l-inline ov ">
 						<li><a href="{{route('trang-chu')}}">Головна</a></li>
 						<li><a href="{{route('all')}}">Категорії</a></li>
 					
